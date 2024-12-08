@@ -1,0 +1,27 @@
+name: Compile LaTeX document
+
+on:
+  push:
+    branches:
+      - main # Cambia a la rama que prefieras
+  pull_request:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Set up LaTeX environment
+        uses: dante-ev/latex-action@v2
+        with:
+          root_file: main.tex # Cambia a tu archivo principal .tex
+          compiler: pdflatex
+
+      - name: Upload compiled PDF
+        uses: actions/upload-artifact@v3
+        with:
+          name: compiled-pdf
+          path: main.pdf # Cambia si tu archivo generado tiene otro nombre
