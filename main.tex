@@ -1,201 +1,191 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Developer CV
-% LaTeX Template
-% Version 1.0 (28/1/19)
-%
-% This template originates from:
-% http://www.LaTeXTemplates.com
-%
-% Authors:
-% Jan Vorisek (jan@vorisek.me)
-% Based on a template by Jan Küster (info@jankuester.com)
-% Modified for LaTeX Templates by Vel (vel@LaTeXTemplates.com)
-%
-% License:
-% The MIT License (see included LICENSE file)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
 
-\documentclass[8pt]{developercv} % Default font size, values from 8-12pt are recommended
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-%----------------------------------------------------------------------------------------
-\hypersetup{
-    colorlinks=true,       % Activa los colores en los enlaces
-    linkcolor=blue,        % Color para enlaces internos (por ejemplo, referencias a secciones)
-    urlcolor=blue,          % Color para URLs
-    citecolor=green        % Color para citas
-}
+\documentclass[10pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.5cm,bottom=1.25cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{000080}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{444444}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks]{hyperref}
 
 \begin{document}
 
-%----------------------------------------------------------------------------------------
-%	TITLE AND CONTACT INFORMATION
-%----------------------------------------------------------------------------------------
-
-\begin{minipage}[t]{0.45\textwidth} % 45% of the page width for name
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% If your name is very short, use just one of the lines below
-	% If your name is very long, reduce the font size or make the minipage wider and reduce the others proportionately
-	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{Raudel Alejandro}}}}} % First name
-	
-	\colorbox{black}{{\Huge\textcolor{white}{\textbf{\MakeUppercase{G\'omez Molina}}}}} % Last name
-	
-	\vspace{6pt}
-	
-	{\huge Computer Science Student\\Software Developer} % Career or current job title
-\end{minipage}
-\begin{minipage}[t]{0.3\textwidth} % 27.5% of the page width for the first row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	\icon{MapMarker}{12}{Havana, Cuba}\\
-	\icon{Phone}{12}{+53 59253662}\\
-	\icon{At}{12}{\href{mailto:raudel.gmolina@gmail.com}{raudel.gmolina@gmail.com}}\\
-\end{minipage}
-\begin{minipage}[t]{0.3\textwidth} % 27.5% of the page width for the second row of icons
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	% The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-	% Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
-	% \icon{Globe}{12}{\href{https://github.com/raudel25}{alyx.vance.me}}\\
-	\icon{Github}{12}{\href{https://github.com/raudel25}{raudel25}}\\
-	\icon{Linkedin}{12}{\href{https://www.linkedin.com/in/raudel25/}{raudel25}}\\
-\end{minipage}
-
-\vspace{0.5cm}
-
-%----------------------------------------------------------------------------------------
-%	INTRODUCTION, SKILLS AND TECHNOLOGIES
-%----------------------------------------------------------------------------------------
-
-\cvsect{Who Am I?}
+\name{Raudel Alejandro Gómez Molina}
+\tagline{Computer Scientist}
+% \photo{2.8cm}{Globe_High}
+\personalinfo{%
+	% Not all of these are required!
+	% You can add your own with \printinfo{symbol}{detail}
+	\email{raudel.gmolina@gmail.com}
+	\phone{(+53) 59253662}
+	%  \mailaddress{Address, Street, 00000 County}
+	\location{Havana, Cuba}
+	\linkedin{raudel25}
+	\github{raudel25}
+	\homepage{https://raudel25-portfolio.vercel.app}
+	%  \twitter{@marissamayer}
+	%   \linkedin{jatin-varlyani}
+	%   \github{Jatin-8898} % I'm just making this up though.
+	%% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+	%   \orcid{orcid.org/0000-0000-0000-0000}
+}
 
 
 
-\begin{minipage}[t]{0.4\textwidth} % 40% of the page width for the introduction text
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	I am a student of computer science at the University of Havana and software developer. I am passionate
-	about mathematics and algorithms and I am interested in working in the fields of software engineering and
-	artificial intelligence. I also work as a competitive programmer and ICPC contestant.
-\end{minipage}
-\hfill % Whitespace between
-\begin{minipage}[t]{0.5\textwidth} % 50% of the page for the skills bar chart
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	\begin{barchart}{5.5}
-		\baritem{C\#}{80}
-		\baritem{Phyton}{80}
-		\baritem{Rust}{60}
-		\baritem{C/C++}{60}
-		\baritem{JavaScript/TypeScript}{70}
-		\baritem{Dart}{70}
-		\baritem{Go}{50}
-		\baritem{Competitive Programming}{70}
-		\baritem{Data Sructures and Algorithms}{80}
-	\end{barchart}
-\end{minipage}
 
-\begin{center}
-	\bubbles{ 5/{HTML/CSS},5/Docker, 6/React, 5/Next, 6/Flutter, 6/.NET, 6/MySQL, 6/{PostgreSQL}}
-\end{center}
 
-%----------------------------------------------------------------------------------------
-%	EXPERIENCE
-%----------------------------------------------------------------------------------------
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+	\makecvheader
+\end{fullwidth}
 
-\cvsect{Experience}
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
 
-\begin{entrylist}
-	\entry
-	{4/2022 -- Till Date\\\footnotesize{part time}}
-	{Assistant Professor}
-	{Havana University}
-	{During my studies at the university I have worked as an assistant in the subjects of Algebra
-		and Data Structures and Algorithms\\ \texttt{Competitive Programming}\slashsep\texttt{Data Sructures and Algorithms}}
-	
-	\entry
-	{2/2024 -- Till Date\\\footnotesize{full time}}
-	{Mobile Developer}
-	{Businessseed}
-	{I worked as a Mobile Developer\\ \texttt{Flutter}\slashsep\texttt{Dart}}
-	
-	\entry
-	{9/2023 -- 1/2024\\\footnotesize{full time}}
-	{Full Stack Developer}
-	{jobs2live}
-	{I worked as a Full Stack Developer\\ \texttt{React}\slashsep\texttt{.NET}\slashsep\texttt{MySql}}
-	
-\end{entrylist}
 
-%----------------------------------------------------------------------------------------
-%	EDUCATION
-%----------------------------------------------------------------------------------------
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar]{Experience}
 
-\cvsect{Education}
+\cvevent{Full stack developer}{jobs2live}{Sep 2023 -- Jan 2024}{Madrid, Spain}
+\begin{itemize}
+	\item TypeScript, React, Antd, C\#, .Net, MySQL, Odata
+	\item I was part of the construction of the company's platform, participating in the modeling and structuring of the website.
+	\item Database model with MySQL and react components using Andt.
+	\item \href{https://www.jobs2live.com/website}{jobs2live web site}.
+	      
+\end{itemize}
 
-\begin{entrylist}
-	\entry
-	{11/2021 -- Till Date}
-	{Computer Science Degree}
-	{Havana University}
-	{I am currently in the 3rd year of my degree}
-	\entry
-	{9/2016 -- 6/2019}
-	{Bachelor's Degree}
-	{IPVCE M\'aximo G\'omez B\'aez}
-	{My Bachelor's studies}
-\end{entrylist}
+\divider
 
-%----------------------------------------------------------------------------------------
-%	ADDITIONAL INFORMATION
-%----------------------------------------------------------------------------------------
+\cvevent{Mobile developer}{Business Seed}{Feb 2024 -- Present}{Mexico DF, Mexico}
+\begin{itemize}
+	\item Dart, Flutter, Getx
+	\item I worked creating hybrid applications for Android and iOS.
+	\item Push notification, location, google maps, camera,
+	      scan qr, local controllers for android client of the recolector machine. 
+	\item Application creation from strach and integration with API-REST to achieve MVP in a short time.
+	\item In the design of applications, Clean Architecture is used, using design patterns and SOLID principles.
+	\item \href{https://land.mideyneutraliza.com/}{User app for Loop project},
+	      \href{https://land.mideyneutraliza.com/}{Recolector app for Loop project}, \href{https://land.mideyneutraliza.com/}{Machine app for Loop project}, Delivery app for El navegate project.
+	      
+\end{itemize}
 
-\begin{minipage}[t]{0.45\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Projects}
-	
-	\begin{itemize}
-		\item {\href{https://github.com/raudel25/Expression}{\textbf{Expression}}: Math Operations implemented in BigNum and a Math Expression generator}
-		\item {\href{https://github.com/raudel25/Journal-App}{\textbf{Journal-App}}: Learning React}
-		\item {\href{https://github.com/raudel25/Calendar-App}{\textbf{Calendar-App}}: Learning React and ASP .NET (API)}
-		\item {\href{https://github.com/raudel25/Calendar-App}{\textbf{Teslo-Shop}}: Learning Next}
-		\item {\href{https://github.com/raudel25/social-network}{\textbf{Social-Network}}: A social network}
-		\item {\href{https://github.com/Jara-Devs/Travel-Agency}{\textbf{Travel-Agency}}: A website for travel agencies and tourists}
-		\item {\href{https://github.com/raudel25/cinemapedia_app}{\textbf{Cinemapedia}}: A Movie Db client}
-		      
-	\end{itemize}
-\end{minipage}
-\hfill
-\begin{minipage}[t]{0.45\textwidth}
-	\vspace{-\baselineskip} % Required for vertically aligning minipages
-	
-	\cvsect{Achievements}
-	
-	\begin{itemize}
-		\item During my undergraduate studies I competed in the subject of mathematics, obtaining a
-		      silver medal and being part of the national preelection on 2 occasions.
-		\item 10th place in ICPC-2021 Caribbean Finals.
-		\item 12th place in ICPC-2022 Caribbean Finals.
-		\item Silver Medal in ICPC-2023 Caribbean Finals.
-	\end{itemize}
-	
-\end{minipage}
-% \hfill
-% \begin{minipage}[t]{0.3\textwidth}
-% 	\vspace{-\baselineskip} % Required for vertically aligning minipages
+\divider
 
-% 	\cvsect{Non profit}
+\cvevent{Mobile Developer}{Bizne MX}{May 2024 -- Present}{Mexico DF, Mexico}
 
-% 	I help... \lorem
-% \end{minipage}
+\begin{itemize}
 
-%----------------------------------------------------------------------------------------
+	\item Dart, Flutter, Getx
+	\item I worked creating hybrid applications for Bizne platform.
+	\item Push notification, location, google map, camera service,
+	      scan qr. 
+	\item Creation and maintenance of the new version of the Bizne application built in Flutter.
+	\item \href{https://play.google.com/store/apps/details?id=mx.devbizne.bizne&hl=en-US}{User app for Bizne project},
+	      \href{https://play.google.com/store/apps/details?id=mx.bizne.kitchen&hl=en-US}{POS app for Bizne project}.
+\end{itemize}
+
+\divider
+
+\cvevent{AssistantProfessor}{Havana University}{Apr 2022 -- Present}{Havana, Cuba}
+
+\begin{itemize}
+
+	\item Competitive Programming, Data Structures and Algorithms.
+	\item  During my studies at the university I have worked as anassistant in the subjects of Algebraand Data Structures and Algorithms.
+	      
+	      
+\end{itemize}
+
+\cvsection{Skills}
+\cvtag{React}
+\cvtag{Next}
+\cvtag{JavaScript}
+\cvtag{TypeScript}
+\cvtag{HTML}
+\cvtag{CSS}
+\cvtag{C/C++}
+\cvtag{C\#}
+\cvtag{.Net}
+\cvtag{MySQL}
+\cvtag{PostgreSQL}
+\cvtag{Docker}
+\cvtag{Python}
+\cvtag{Git}
+\cvtag{Github}
+\cvtag{Dart}
+\cvtag{Flutter}
+\cvtag{Getx}
+\cvtag{Go}
+\cvtag{Rust}
+
+\clearpage
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
 
 \end{document}
