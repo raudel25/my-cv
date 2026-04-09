@@ -1,0 +1,26 @@
+name: Build & Deploy Academic
+on:
+  push:
+    branches: [ academic ]
+  workflow_dispatch:
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clone repo
+        uses: actions/checkout@v2
+      - name: LaTeX compilation
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: main.tex
+          working_directory: .
+      - name: Prepare for Deploy
+        run: |
+          mkdir build
+          mv main.pdf build/academic.pdf
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@4.1.5
+        with:
+          branch: gh-pages
+          folder: build
+          clean: false
