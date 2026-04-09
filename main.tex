@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%
 % This is an sample CV template created using altacv.cls
 % (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
-% 
+%
 %% It may be distributed and/or modified under the
 %% conditions of the LaTeX Project Public License, either version 1.3
 %% of this license or (at your option) any later version.
@@ -14,38 +14,15 @@
 %% If you need to pass whatever options to xcolor
 \PassOptionsToPackage{dvipsnames}{xcolor}
 
-%% If you are using \orcid or academicons
-%% icons, make sure you have the academicons 
-%% option here, and compile with XeLaTeX
-%% or LuaLaTeX.
-% \documentclass[10pt,a4paper,academicons]{altacv}
-
-%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
-% \documentclass[10pt,a4paper,normalphoto]{altacv}
-
 \documentclass[10pt,a4paper]{altacv}
-%% AltaCV uses the fontawesome and academicon fonts
-%% and packages. 
-%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
-%% 
-%% Compile with LuaLaTeX for best results. If you
-%% want to use XeLaTeX, you may need to install
-%% Academicons.ttf in your operating system's font 
-%% folder.
-
 
 % Change the page layout if you need to
 \geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.5cm,bottom=1.25cm,footskip=2\baselineskip}
-
-% Change the font if you want to.
 
 % If using pdflatex:
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage[default]{lato}
-
-% If using xelatex or lualatex:
-% \setmainfont{Lato}
 
 % Change the colours if you want to
 \definecolor{Navy}{HTML}{000080}
@@ -57,7 +34,6 @@
 \colorlet{body}{LightGrey}
 
 % Change the bullets for itemize and rating marker
-% for \cvskill if you want to
 \renewcommand{\itemmarker}{{\small\textbullet}}
 \renewcommand{\ratingmarker}{\faCircle}
 %% sample.bib contains your publications
@@ -68,133 +44,88 @@
 \begin{document}
 
 \name{Raudel Alejandro Gómez Molina}
-\tagline{Computer Scientist}
-% \photo{2.8cm}{Globe_High}
+\tagline{Computer Scientist | Researcher}
 \personalinfo{%
-	% Not all of these are required!
-	% You can add your own with \printinfo{symbol}{detail}
 	\email{raudel.gmolina@gmail.com}
 	\phone{(+53) 59253662}
-	%  \mailaddress{Address, Street, 00000 County}
 	\location{Havana, Cuba}
 	\linkedin{raudel25}
 	\github{raudel25}
 	\homepage{https://raudel25-portfolio.vercel.app}
-	%  \twitter{@marissamayer}
-	%   \linkedin{jatin-varlyani}
-	%   \github{Jatin-8898} % I'm just making this up though.
-	%% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
-	%   \orcid{orcid.org/0000-0000-0000-0000}
 }
 
-
-
-
-
-%% Make the header extend all the way to the right, if you want. 
 \begin{fullwidth}
 	\makecvheader
 \end{fullwidth}
 
-%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
-% \AtBeginEnvironment{itemize}{\small}
+\cvsection[page1sidebar]{Education}
+
+\cvevent{Bachelor's Degree in Computer Science}{University of Havana -- Cuba}{Nov 2021 -- Mar 2025}{}
+\begin{itemize}
+	\item \textbf{Distinction:} Gold Title and Scientific Merit Award.
+	\item Core areas: Algorithms, Data Structures, Algebra, Discrete Mathematics, Databases, Distributed Systems, Programming Languages Theory, Artificial Intelligence.
+	\item Thesis: \textit{An Approximation to the Language of All Satisfiable Boolean Formulas.}
+\end{itemize}
+
+\divider
+
+\cvsection{Teaching Experience}
+
+\cvevent{Assistant Professor}{University of Havana}{Apr 2022 -- Mar 2025}{Havana, Cuba}
+\begin{itemize}
+	\item \textbf{Subjects:} Data Structures and Algorithms, Algebra.
+	\item Mentored undergraduate students; designed problem sets and ICPC-style exercises for Competitive Programming training.
+\end{itemize}
+
+\divider
+
+\cvsection{Research \& Academic Projects}
+
+\cvevent{An Approximation to the Language of All Satisfiable Boolean Formulas}{Undergraduate Thesis -- University of Havana}{2024 -- 2025}{}
+\begin{itemize}
+	\item Links SAT (NP-Complete) with formal language theory to construct the language of all satisfiable Boolean formulas.
+	\item Two strategies: (1) transduction of a Copy language variant, proving NP-Hardness of the word problem for closed formalisms; (2) a Range Concatenation Grammar recognizing this language, showing RCGs capture all NP problems as formal languages.
+\end{itemize}
 
 
-%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
-%% You can always just use \marginpar{...} if you do
-%% not need to align the top of the contents to any
-%% \cvsection title in the "main" bar.
-\cvsection[page1sidebar]{Experience}
+\cvsection{Professional Experience}
 
 \cvevent{Full Stack Developer}{jobs2live}{Sep 2023 -- Jan 2024, Mar 2025 -- Present}{Madrid, Spain}
 \begin{itemize}
-	\item TypeScript, React, Antd, Next, C\#, .Net, PostgreSQL, Odata, Playwright, Nodriver, Web Scraping
-	\item I was part of the construction of the company's platform, participating in the modeling and structuring of the website.
-	\item N-layer architecture using the CQRS pattern and automate code generation for entity models.
-	\item Database model with PostgreSQL and react components using Andt.
-	\item Scraping data from LinkedIn and creating bots to interact with the website.
-	\item \href{https://www.jobs2live.com/website}{jobs2live website}.
-
+	\item TypeScript, React, Next.js, C\#, .NET, PostgreSQL, OData, Playwright, Web Scraping.
+	\item N-layer architecture with CQRS pattern; database modeling and LinkedIn scraping bots.
 \end{itemize}
 
 \divider
 
-\cvevent{Mobile Developer}{Business Seed}{Feb 2024 -- Jul 2025}{Mexico DF, Mexico}
+\cvevent{Mobile Developer}{Business Seed \& Bizne MX}{Feb 2024 -- Present}{Mexico DF, Mexico}
 \begin{itemize}
 	\item Dart, Flutter, Getx.
-	\item I worked creating hybrid applications for Android and iOS.
-	\item Push notification, location, google maps, camera,
-	      scan qr, local controllers for android client of the recolector machine.
-	\item Application creation from strach and integration with API-REST to achieve MVP in a short time.
-	\item In the design of applications, Clean Architecture is used, using design patterns and SOLID principles.
-	\item \href{https://land.mideyneutraliza.com/}{User app for Loop project},
-	      \href{https://land.mideyneutraliza.com/}{Recolector app for Loop project}, \href{https://land.mideyneutraliza.com/}{Machine app for Loop project}, Delivery app for El navegate project.
-
+	\item Hybrid Android/iOS apps with Clean Architecture; push notifications, maps, QR scanning.
 \end{itemize}
 
-\divider
+\cvsection{Technical Skills}
 
-\cvevent{Mobile Developer}{Bizne MX}{May 2024 -- Present}{Mexico DF, Mexico}
-
-\begin{itemize}
-
-	\item Dart, Flutter, Getx.
-	\item I worked creating hybrid applications for Bizne platform.
-	\item Push notification, location, google map, camera service,
-	      scan qr.
-	\item Creation and maintenance of the new version of the Bizne application built in Flutter.
-	\item \href{https://play.google.com/store/apps/details?id=mx.devbizne.bizne&hl=en-US}{User app for Bizne project},
-	      \href{https://play.google.com/store/apps/details?id=mx.bizne.kitchen&hl=en-US}{POS app for Bizne project}.
-\end{itemize}
-
-\divider
-
-\cvevent{Assistant Professor}{Havana University}{Apr 2022 -- Present}{Havana, Cuba}
-
-\begin{itemize}
-
-	\item Competitive Programming, Data Structures and Algorithms.
-	\item  During my studies at the university I have worked as anassistant in the subjects of Algebraand Data Structures and Algorithms.
-
-
-\end{itemize}
-
-\cvsection{Skills}
-\cvtag{React}
-\cvtag{Next}
-\cvtag{Antd}
-\cvtag{JavaScript}
-\cvtag{TypeScript}
-\cvtag{HTML}
-\cvtag{CSS}
 \cvtag{C/C++}
-\cvtag{C\#}
-\cvtag{.Net}
-\cvtag{MySQL}
-\cvtag{PostgreSQL}
-\cvtag{Docker}
 \cvtag{Python}
-\cvtag{Git}
-\cvtag{Github}
-\cvtag{Dart}
-\cvtag{Flutter}
-\cvtag{Getx}
 \cvtag{Go}
 \cvtag{Rust}
-\cvtag{Playwright}
-\cvtag{Nodriver}
-\cvtag{Web scraping}
+\cvtag{Algorithms}
+\cvtag{Data Structures}
+\cvtag{Competitive Programming}
+\cvtag{Problem Solving}
+\cvtag{Algorithmic Thinking}
 \cvtag{Research}
-% \cvtag{Language Theory}
-% \cvtag{NP-Problems Theory}
+\cvtag{LaTeX}
+\cvtag{Git}
+\cvtag{Docker}
+\cvtag{PostgreSQL}
+\cvtag{React}
+\cvtag{TypeScript}
+\cvtag{C\#}
+\cvtag{Dart}
+\cvtag{Flutter}
 
 \clearpage
-
-%% If the NEXT page doesn't start with a \cvsection but you'd
-%% still like to add a sidebar, then use this command on THIS
-%% page to add it. The optional argument lets you pull up the 
-%% sidebar a bit so that it looks aligned with the top of the
-%% main column.
-% \addnextpagesidebar[-1ex]{page3sidebar}
 
 \end{document}
