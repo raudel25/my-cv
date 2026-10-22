@@ -23,7 +23,7 @@
 %% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
 % \documentclass[10pt,a4paper,normalphoto]{altacv}
 
-\documentclass[10pt,a4paper]{altacv}
+\documentclass[9pt,a4paper]{altacv}
 %% AltaCV uses the fontawesome and academicon fonts
 %% and packages. 
 %% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
@@ -35,7 +35,7 @@
 
 
 % Change the page layout if you need to
-\geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.5cm,bottom=1.25cm,footskip=2\baselineskip}
+\geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.4cm,bottom=0.6cm,footskip=2\baselineskip}
 
 % Change the font if you want to.
 
@@ -48,7 +48,7 @@
 % \setmainfont{Lato}
 
 % Change the colours if you want to
-\definecolor{Navy}{HTML}{000080}
+\definecolor{Navy}{HTML}{1F4E79}
 \definecolor{SlateGrey}{HTML}{2E2E2E}
 \definecolor{LightGrey}{HTML}{444444}
 \colorlet{heading}{Navy}
@@ -63,7 +63,7 @@
 %% sample.bib contains your publications
 \addbibresource{sample.bib}
 
-\usepackage[colorlinks]{hyperref}
+\usepackage[colorlinks,urlcolor=accent,linkcolor=accent]{hyperref}
 
 \begin{document}
 
@@ -106,87 +106,61 @@
 %% \cvsection title in the "main" bar.
 \cvsection[page1sidebar]{Experience}
 
-\cvevent{Full Stack Developer}{jobs2live}{Sep 2023 -- Jan 2024}{Madrid, Spain}
+\cvevent{Senior Software Engineer, Mobile \& Web}{Bizne MX}{Sep 2025 -- Present}{Mexico City, Mexico}
+\cvstack{Dart, Flutter, Getx, Next.js, BFF, AI-assisted development}
 \begin{itemize}
-	\item TypeScript, React, Antd, Next, C\#, .Net, PostgreSQL, Odata, Playwright, Nodriver, Web Scraping
-	\item I was part of the construction of the company's platform, participating in the modeling and structuring of the website.
-	\item N-layer architecture using the CQRS pattern and automate code generation for entity models.
-	\item Database model with PostgreSQL and react components using Andt.
-	\item Scraping data from LinkedIn and creating bots to interact with the website.
+	\item Promoted from Mobile Developer (Sep 2025 -- May 2026) to Senior Software Engineer (Jun 2026).
+	\item Built and maintain the new Flutter version of the Bizne apps end to end: push notifications, location, maps, camera and QR scanning.
+	\item Built Next.js web apps with a Backend for Frontend (BFF) architecture and integrated them into the mobile apps through a native shell.
+	\item Use AI agents to speed up development and refactoring while keeping code quality high.
+	\item \href{https://play.google.com/store/apps/details?id=mx.devbizne.bizne&hl=en-US}{Bizne user app},
+	      \href{https://play.google.com/store/apps/details?id=mx.bizne.kitchen&hl=en-US}{Bizne POS app}.
+\end{itemize}
+
+\divider
+
+\cvevent{Professor of Data Structures and Algorithms}{University of Havana}{Apr 2022 -- Present}{Havana, Cuba}
+\begin{itemize}
+	\item Teach the Data Structures and Algorithms course; previously Student Assistant (Apr 2022 -- Mar 2025) in Algebra and Data Structures and Algorithms.
+\end{itemize}
+
+\divider
+
+\cvevent{Full Stack Developer}{jobs2live}{Sep 2023 -- Sep 2025}{Madrid, Spain}
+\cvstack{TypeScript, React, Antd, Next.js, C\#, .NET, PostgreSQL, OData, Playwright, Nodriver, Web Scraping}
+\begin{itemize}
+	\item Helped build the company platform from the ground up, modeling the domain and structuring the website.
+	\item Designed an N-layer architecture with the CQRS pattern and automated code generation for entity models.
+	\item Designed the PostgreSQL data model and built the React UI with Antd.
+	\item Built LinkedIn scrapers and bots that automate interaction with the website.
 	\item \href{https://www.jobs2live.com/website}{jobs2live website}.
-
 \end{itemize}
 
 \divider
 
-\cvevent{Mobile Developer}{Business Seed}{Feb 2024 -- Jul 2025}{Mexico DF, Mexico}
+\cvevent{Mobile Developer}{Business Seed}{Feb 2024 -- Dec 2024}{Mexico City, Mexico}
+\cvstack{Dart, Flutter, Getx}
 \begin{itemize}
-	\item Dart, Flutter, Getx.
-	\item I worked creating hybrid applications for Android and iOS.
-	\item Push notification, location, google maps, camera,
-	      scan qr, local controllers for android client of the recolector machine.
-	\item Application creation from strach and integration with API-REST to achieve MVP in a short time.
-	\item In the design of applications, Clean Architecture is used, using design patterns and SOLID principles.
-	\item \href{https://land.mideyneutraliza.com/}{User app for Loop project},
-	      \href{https://land.mideyneutraliza.com/}{Recolector app for Loop project}, \href{https://land.mideyneutraliza.com/}{Machine app for Loop project}, Delivery app for El navegate project.
-
-\end{itemize}
-
-\divider
-
-\cvevent{Mobile Developer}{Bizne MX}{Sep 2025 -- Present}{Mexico DF, Mexico}
-
-\begin{itemize}
-
-	\item Dart, Flutter, Getx.
-	\item I worked creating hybrid applications for Bizne platform.
-	\item Push notification, location, google map, camera service,
-	      scan qr.
-	\item Creation and maintenance of the new version of the Bizne application built in Flutter.
-	\item \href{https://play.google.com/store/apps/details?id=mx.devbizne.bizne&hl=en-US}{User app for Bizne project},
-	      \href{https://play.google.com/store/apps/details?id=mx.bizne.kitchen&hl=en-US}{POS app for Bizne project}.
-\end{itemize}
-
-\divider
-
-\cvevent{Assistant Professor}{Havana University}{Apr 2022 -- Present}{Havana, Cuba}
-
-\begin{itemize}
-
-	\item Competitive Programming, Data Structures and Algorithms.
-	\item  During my studies at the university I have worked as anassistant in the subjects of Algebraand Data Structures and Algorithms.
-
-
+	\item Built hybrid Android and iOS apps from scratch and integrated them with REST APIs, shipping MVPs in short timeframes.
+	\item Implemented push notifications, location, Google Maps, camera, QR scanning and local controllers for the Android client of the collection machine.
+	\item Applied Clean Architecture, design patterns and SOLID principles.
+	\item User, collector and machine apps for the \href{https://land.mideyneutraliza.com/}{Loop project}; delivery app for the El Navegante project.
 \end{itemize}
 
 \cvsection{Skills}
-\cvtag{React}
-\cvtag{Next}
-\cvtag{Antd}
-\cvtag{JavaScript}
-\cvtag{TypeScript}
-\cvtag{HTML}
-\cvtag{CSS}
-\cvtag{C/C++}
-\cvtag{C\#}
-\cvtag{.Net}
-\cvtag{MySQL}
-\cvtag{PostgreSQL}
-\cvtag{Docker}
-\cvtag{Python}
-\cvtag{Git}
-\cvtag{Github}
-\cvtag{Dart}
-\cvtag{Flutter}
-\cvtag{Getx}
-\cvtag{Go}
-\cvtag{Rust}
-\cvtag{Playwright}
-\cvtag{Nodriver}
-\cvtag{Web scraping}
-\cvtag{Research}
-% \cvtag{Language Theory}
-% \cvtag{NP-Problems Theory}
+
+\cvskillrow{Mobile}{Flutter, Dart, Getx}
+\cvskillrow{Web}{React, Next.js, TypeScript, JavaScript, Antd}
+\cvskillrow{Backend \& Data}{C\#, .NET, Go, PostgreSQL, MySQL, OData, BFF}
+\cvskillrow{Programming}{C/C++, Python, Rust}
+\cvskillrow{Tools \& Other}{Git, Docker, Playwright, Nodriver, Web Scraping, AI-assisted development, Research}
+
+\cvsection{Languages}
+
+\begin{itemize}
+    \item Spanish -- Native.
+    \item English -- Technical reading proficiency.
+\end{itemize}
 
 \clearpage
 

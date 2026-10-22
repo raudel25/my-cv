@@ -1,0 +1,136 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+%
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+\documentclass[9pt,a4paper]{altacv}
+
+% Change the page layout if you need to
+\geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.4cm,bottom=0.6cm,footskip=2\baselineskip}
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{1F4E79}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{444444}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks,urlcolor=accent,linkcolor=accent]{hyperref}
+
+\begin{document}
+
+\name{Raudel Alejandro Gómez Molina}
+\tagline{Computer Scientist | Researcher}
+\personalinfo{%
+	\email{raudel.gmolina@gmail.com}
+	\phone{(+53) 59253662}
+	\location{Havana, Cuba}
+	\linkedin{raudel25}
+	\github{raudel25}
+	\homepage{https://raudel25-portfolio.vercel.app}
+}
+
+\begin{fullwidth}
+	\makecvheader
+\end{fullwidth}
+
+\cvsection[page1sidebar-academic]{Education}
+
+\cvevent{Bachelor's Degree in Computer Science}{University of Havana -- Cuba}{Nov 2021 -- Mar 2025}{}
+\begin{itemize}
+	\item \textbf{Distinction:} Summa Cum Laude and Scientific Merit Award.
+	\item GPA: 4.84/5.00
+	\item Core areas: Algorithms, Data Structures, Algebra, Discrete Mathematics, Databases, Distributed Systems, Programming Languages Theory, Artificial Intelligence.
+	\item Thesis: \textit{An Approximation to the Language of All Satisfiable Boolean Formulas.}
+\end{itemize}
+
+\cvsection{Teaching Experience}
+
+\cvevent{Professor of Data Structures and Algorithms}{University of Havana}{Mar 2025 -- Present}{Havana, Cuba}
+\begin{itemize}
+	\item I teach the Data Structures and Algorithms course.
+	\item Previously Student Assistant (Apr 2022 -- Mar 2025) in Data Structures and Algorithms and Algebra.
+	\item Mentored undergraduate students; designed problem sets and ICPC-style exercises for Competitive Programming training.
+	\item Designed and helped implement lectures and practical classes for the course programs.
+\end{itemize}
+
+\cvsection{Research \& Academic Projects}
+
+\cvevent{An Approximation to the Language of All Satisfiable Boolean Formulas}{Undergraduate Thesis -- University of Havana}{2024 -- 2025}{}
+\begin{itemize}
+	\item Links SAT (NP-Complete) with formal language theory to construct the language of all satisfiable Boolean formulas.
+	\item Two strategies: (1) transduction of a Copy language variant, proving NP-Hardness of the word problem for closed formalisms; (2) a Range Concatenation Grammar recognizing this language, showing RCGs capture all NP problems as formal languages.
+\end{itemize}
+
+
+\cvsection{Professional Experience}
+
+\cvevent{Senior Software Engineer, Mobile \& Web}{Bizne MX}{Sep 2025 -- Present}{Mexico City, Mexico}
+\begin{itemize}
+	\item Next.js web apps with a Backend for Frontend (BFF) architecture, integrated into the mobile apps through a native shell.
+	\item Promoted from Mobile Developer (Sep 2025 -- May 2026); Dart, Flutter and Getx.
+\end{itemize}
+
+\divider
+
+\cvevent{Full Stack Developer}{jobs2live}{Sep 2023 -- Sep 2025}{Madrid, Spain}
+\begin{itemize}
+	\item TypeScript, React, Next.js, C\#, .NET, PostgreSQL; N-layer CQRS architecture and LinkedIn scraping bots.
+\end{itemize}
+
+\divider
+
+\cvevent{Mobile Developer}{Business Seed}{Feb 2024 -- Dec 2024}{Mexico City, Mexico}
+\begin{itemize}
+	\item Hybrid Android/iOS apps with Dart, Flutter and Getx following Clean Architecture.
+\end{itemize}
+
+\cvsection{Technical Skills}
+
+\cvtag{C/C++}
+\cvtag{Python}
+\cvtag{Go}
+\cvtag{Rust}
+\cvtag{Algorithms}
+\cvtag{Data Structures}
+\cvtag{Competitive Programming}
+\cvtag{Problem Solving}
+\cvtag{Algorithmic Thinking}
+\cvtag{Research}
+\cvtag{LaTeX}
+\cvtag{Git}
+\cvtag{Docker}
+\cvtag{PostgreSQL}
+\cvtag{React}
+\cvtag{TypeScript}
+\cvtag{C\#}
+\cvtag{Dart}
+\cvtag{Flutter}
+
+\clearpage
+
+\end{document}

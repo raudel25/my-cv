@@ -1,0 +1,174 @@
+%%%%%%%%%%%%%%%%%
+% This is an sample CV template created using altacv.cls
+% (v1.1.4, 27 July 2018) written by LianTze Lim (liantze@gmail.com). Now compiles with pdfLaTeX, XeLaTeX and LuaLaTeX.
+% 
+%% It may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License, either version 1.3
+%% of this license or (at your option) any later version.
+%% The latest version of this license is in
+%%    http://www.latex-project.org/lppl.txt
+%% and version 1.3 or later is part of all distributions of LaTeX
+%% version 2003/12/01 or later.
+%%%%%%%%%%%%%%%%
+\newcommand{\RNum}[1]{\uppercase\expandafter{\romannumeral #1\relax}}
+%% If you need to pass whatever options to xcolor
+\PassOptionsToPackage{dvipsnames}{xcolor}
+
+%% If you are using \orcid or academicons
+%% icons, make sure you have the academicons 
+%% option here, and compile with XeLaTeX
+%% or LuaLaTeX.
+% \documentclass[10pt,a4paper,academicons]{altacv}
+
+%% Use the "normalphoto" option if you want a normal photo instead of cropped to a circle
+% \documentclass[10pt,a4paper,normalphoto]{altacv}
+
+\documentclass[9pt,a4paper]{altacv}
+%% AltaCV uses the fontawesome and academicon fonts
+%% and packages. 
+%% See texdoc.net/pkg/fontawecome and http://texdoc.net/pkg/academicons for full list of symbols.
+%% 
+%% Compile with LuaLaTeX for best results. If you
+%% want to use XeLaTeX, you may need to install
+%% Academicons.ttf in your operating system's font 
+%% folder.
+
+
+% Change the page layout if you need to
+\geometry{left=0.5cm,right=6.5cm,marginparwidth=5.8cm,marginparsep=0.2cm,top=0.4cm,bottom=0.6cm,footskip=2\baselineskip}
+
+% Change the font if you want to.
+
+% If using pdflatex:
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[default]{lato}
+
+% If using xelatex or lualatex:
+% \setmainfont{Lato}
+
+% Change the colours if you want to
+\definecolor{Navy}{HTML}{1F4E79}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{444444}
+\colorlet{heading}{Navy}
+\colorlet{accent}{Navy}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+% Change the bullets for itemize and rating marker
+% for \cvskill if you want to
+\renewcommand{\itemmarker}{{\small\textbullet}}
+\renewcommand{\ratingmarker}{\faCircle}
+%% sample.bib contains your publications
+\addbibresource{sample.bib}
+
+\usepackage[colorlinks,urlcolor=accent,linkcolor=accent]{hyperref}
+
+\begin{document}
+
+\name{Raudel Alejandro Gómez Molina}
+\tagline{Científico de la Computación}
+% \photo{2.8cm}{Globe_High}
+\personalinfo{%
+	% Not all of these are required!
+	% You can add your own with \printinfo{symbol}{detail}
+	\email{raudel.gmolina@gmail.com}
+	\phone{(+53) 59253662}
+	%  \mailaddress{Address, Street, 00000 County}
+	\location{La Habana, Cuba}
+	\linkedin{raudel25}
+	\github{raudel25}
+	\homepage{https://raudel25-portfolio.vercel.app}
+	%  \twitter{@marissamayer}
+	%   \linkedin{jatin-varlyani}
+	%   \github{Jatin-8898} % I'm just making this up though.
+	%% You MUST add the academicons option to \documentclass, then compile with LuaLaTeX or XeLaTeX, if you want to use \orcid or other academicons commands.
+	%   \orcid{orcid.org/0000-0000-0000-0000}
+}
+
+
+
+
+
+%% Make the header extend all the way to the right, if you want. 
+\begin{fullwidth}
+	\makecvheader
+\end{fullwidth}
+
+%% Depending on your tastes, you may want to make fonts of itemize environments slightly smaller
+% \AtBeginEnvironment{itemize}{\small}
+
+
+%% Provide the file name containing the sidebar contents as an optional parameter to \cvsection.
+%% You can always just use \marginpar{...} if you do
+%% not need to align the top of the contents to any
+%% \cvsection title in the "main" bar.
+\cvsection[page1sidebar-es]{Experiencia}
+
+\cvevent{Senior Software Engineer, Mobile \& Web}{Bizne MX}{Sep 2025 -- Presente}{Ciudad de México, México}
+\cvstack{Dart, Flutter, Getx, Next.js, BFF, desarrollo asistido por IA}
+\begin{itemize}
+	\item Ascendido de Desarrollador Móvil (Sep 2025 -- May 2026) a Senior Software Engineer (Jun 2026).
+	\item Desarrollo y mantengo de punta a punta la nueva versión en Flutter de las apps de Bizne: notificaciones push, ubicación, mapas, cámara y escaneo de QR.
+	\item Desarrollo apps web con Next.js y arquitectura Backend for Frontend (BFF), integradas en las apps móviles mediante un shell nativo.
+	\item Uso agentes de IA para acelerar el desarrollo y la refactorización manteniendo la calidad del código.
+	\item \href{https://play.google.com/store/apps/details?id=mx.devbizne.bizne&hl=en-US}{App de usuario de Bizne},
+	      \href{https://play.google.com/store/apps/details?id=mx.bizne.kitchen&hl=en-US}{App de POS de Bizne}.
+\end{itemize}
+
+\divider
+
+\cvevent{Profesor de Estructuras de Datos y Algoritmos}{Universidad de La Habana}{Abr 2022 -- Presente}{La Habana, Cuba}
+\begin{itemize}
+	\item Imparto Estructuras de Datos y Algoritmos; antes Alumno Ayudante (Abr 2022 -- Mar 2025) en Álgebra y Estructuras de Datos y Algoritmos.
+\end{itemize}
+
+\divider
+
+\cvevent{Desarrollador Full Stack}{jobs2live}{Sep 2023 -- Sep 2025}{Madrid, España}
+\cvstack{TypeScript, React, Antd, Next.js, C\#, .NET, PostgreSQL, OData, Playwright, Nodriver, Web Scraping}
+\begin{itemize}
+	\item Participé en la construcción de la plataforma de la empresa desde cero, modelando el dominio y estructurando el sitio web.
+	\item Diseñé una arquitectura en N capas con el patrón CQRS y automaticé la generación de código para los modelos de entidades.
+	\item Diseñé el modelo de datos en PostgreSQL y construí la interfaz en React con Antd.
+	\item Desarrollé scrapers de LinkedIn y bots que automatizan la interacción con el sitio web.
+	\item \href{https://www.jobs2live.com/website}{Sitio web de jobs2live}.
+\end{itemize}
+
+\divider
+
+\cvevent{Desarrollador Móvil}{Business Seed}{Feb 2024 -- Dic 2024}{Ciudad de México, México}
+\cvstack{Dart, Flutter, Getx}
+\begin{itemize}
+	\item Desarrollé desde cero apps híbridas para Android e iOS integradas con APIs REST, entregando MVPs en poco tiempo.
+	\item Implementé notificaciones push, ubicación, Google Maps, cámara, escaneo de QR y controladores locales para el cliente Android de la máquina recolectora.
+	\item Apliqué Clean Architecture, patrones de diseño y los principios SOLID.
+	\item Apps de usuario, recolector y máquina del \href{https://land.mideyneutraliza.com/}{proyecto Loop}; app de delivery del proyecto El Navegante.
+\end{itemize}
+
+\cvsection{Habilidades}
+
+\cvskillrow{Móvil}{Flutter, Dart, Getx}
+\cvskillrow{Web}{React, Next.js, TypeScript, JavaScript, Antd}
+\cvskillrow{Backend y Datos}{C\#, .NET, Go, PostgreSQL, MySQL, OData, BFF}
+\cvskillrow{Programación}{C/C++, Python, Rust}
+\cvskillrow{Herramientas y Otros}{Git, Docker, Playwright, Nodriver, Web Scraping, desarrollo asistido por IA, Investigación}
+
+\cvsection{Idiomas}
+
+\begin{itemize}
+    \item Español -- Nativo.
+    \item Inglés -- Lectura técnica.
+\end{itemize}
+
+\clearpage
+
+%% If the NEXT page doesn't start with a \cvsection but you'd
+%% still like to add a sidebar, then use this command on THIS
+%% page to add it. The optional argument lets you pull up the 
+%% sidebar a bit so that it looks aligned with the top of the
+%% main column.
+% \addnextpagesidebar[-1ex]{page3sidebar}
+
+\end{document}

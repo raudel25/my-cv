@@ -3,23 +3,37 @@ on:
   push:
     branches: [ main ]
   workflow_dispatch:
+permissions:
+  contents: write
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - name: Clone repo
-        uses: actions/checkout@v2
-      - name: LaTeX compilation
+        uses: actions/checkout@v5
+      - name: LaTeX compilation (English)
         uses: dante-ev/latex-action@2021-A
         with:
           root_file: main.tex
+          working_directory: .
+      - name: LaTeX compilation (Spanish)
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: main-es.tex
+          working_directory: .
+      - name: LaTeX compilation (Academic)
+        uses: dante-ev/latex-action@2021-A
+        with:
+          root_file: main-academic.tex
           working_directory: .
       - name: Prepare for Deploy
         run: |
           mkdir build
           mv main.pdf build/document.pdf
+          mv main-es.pdf build/document-es.pdf
+          mv main-academic.pdf build/academic.pdf
       - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@4.1.5
+        uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages
           folder: build

@@ -132,14 +132,26 @@
 
 % v1.1.4: fixes inconsistent font size
 \newcommand{\cvevent}[4]{%
-  {\large\color{emphasis}#1\par}
+  {\large\bfseries\color{emphasis}#1\par}
   \smallskip\normalsize
   \ifstrequal{#2}{}{}{
-  \textbf{\color{accent}#2}\par
+  {\color{accent}#2}\par
   \smallskip}
   \ifstrequal{#3}{}{}{{\small\makebox[0.5\linewidth][l]{\faCalendar\hspace{0.5em}#3}}}%
   \ifstrequal{#4}{}{}{{\small\makebox[0.5\linewidth][l]{\faMapMarker\hspace{0.5em}#4}}}\par
   \medskip
+}
+
+% One category of skills: bold label followed by a comma-separated list.
+\newcommand{\cvskillrow}[2]{%
+  {\textbf{\color{emphasis}#1:} #2\par}%
+  \smallskip
+}
+
+% Tech stack line shown under an event's date and location.
+\newcommand{\cvstack}[1]{%
+  {\small\color{body}\textit{Stack:} #1\par}%
+  \smallskip
 }
 
 \newcommand{\cvachievement}[3]{%
